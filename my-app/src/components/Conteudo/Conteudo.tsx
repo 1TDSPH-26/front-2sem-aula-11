@@ -1,9 +1,24 @@
+import { useState } from 'react'
 import Quadrado from '../../img/quadrado.png'
 
 export default function Conteudo() {
+    const [nome, setNome] = useState<string|null>("")
+    
+
+    function alterarNome () {
+        const nome:string|null = prompt("digite um novo nome: ") 
+        setNome((e) => e = nome)
+        console.log(`Nome digitado: ${nome}`)
+    }
+
 
     return(
         <main>
+            <div> 
+
+                <p>Nome: {nome}</p>
+                <button onClick={() => alterarNome()}>Nome = {nome}</button>
+            </div>
             <div>
                 <h1>Hero Page</h1>
             </div>
@@ -22,6 +37,7 @@ export default function Conteudo() {
                 </figure>
 
             </section>
+
         </main>
     )
 }
