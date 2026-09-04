@@ -1,7 +1,8 @@
+
 export default function Rodape() {
   return (
     <footer>
-      <p>Todos os direitos reservados &copy;</p>
+      <p>&copy; 2026 - Todos os direitos reservados - Boilerplate</p>
     </footer>
-  );
+  )
 }

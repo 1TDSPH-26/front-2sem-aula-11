@@ -1,13 +1,15 @@
+
 export default function Cabecalho() {
   return (
     <header>
-      <h1>Minha Página React</h1>
-
+      <h1>Lista de coisas</h1>
       <nav>
-        <a href="#">Início</a>
-        <a href="#">Produtos</a>
-        <a href="#">Contato</a>
+        <ul>
+          <li>Item-1</li>
+          <li>Item-1</li>
+          <li>Item-1</li>
+        </ul>
       </nav>
     </header>
-  );
+  )
 }
