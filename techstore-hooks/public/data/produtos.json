@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nome": "Notebook Tech One",
+    "preco": 4299.9,
+    "categoria": "notebook",
+    "status": "disponivel",
+    "estoque": 12,
+    "imagem": "/images/notebook-one.svg",
+    "descricao": "Notebook para estudos com 16 GB e SSD de 512 GB."
+},
+{
+    "id": 2,
+    "nome": "Teclado Tech Keys",
+    "preco": 349.9,
+    "categoria": "acessorio",
+    "status": "baixo-estoque",
+    "estoque": 3,
+    "imagem": "/images/teclado.svg",
+    "descricao": "Teclado mecânico compacto com conexão USB-C."
+}
+{
+    "id": 3,
+    "nome": "Notebook Tech One",
+    "preco": 4299.9,
+    "categoria": "notebook",
+    "status": "disponivel",
+    "estoque": 12,
+    "imagem": "/images/notebook-one.svg",
+    "descricao": "Notebook para estudos com 16 GB e SSD de 512 GB."
+},
+{
+    "id": 4,
+    "nome": "Teclado Tech Keys",
+    "preco": 349.9,
+    "categoria": "acessorio",
+    "status": "baixo-estoque",
+    "estoque": 3,
+    "imagem": "/images/teclado.svg",
+    "descricao": "Teclado mecânico compacto com conexão USB-C."
+}
+{
+    "id": 5,
+    "nome": "Notebook Tech One",
+    "preco": 4299.9,
+    "categoria": "notebook",
+    "status": "disponivel",
+    "estoque": 12,
+    "imagem": "/images/notebook-one.svg",
+    "descricao": "Notebook para estudos com 16 GB e SSD de 512 GB."
+},
+{
+    "id": 6,
+    "nome": "Teclado Tech Keys",
+    "preco": 349.9,
+    "categoria": "acessorio",
+    "status": "baixo-estoque",
+    "estoque": 3,
+    "imagem": "/images/teclado.svg",
+    "descricao": "Teclado mecânico compacto com conexão USB-C."
+}
+]
