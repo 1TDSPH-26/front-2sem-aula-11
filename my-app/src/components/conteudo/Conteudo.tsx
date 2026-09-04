@@ -1,17 +1,35 @@
+
+import { useState } from "react";
 import imgQuadrada from "../../img/quadrado.png";
-import {useState} from "react";
+
 export default function Conteudo() {
 
-    const[mostraSecao, setMostraSecao] = useState(false);
- 
-      const alternaSecao = () =>{
- 
-        setMostraSecao(!mostraSecao);
-        console.log(mostraSecao);
-      }
+  let nome: string | null = "Cadu";
+
+  const [nomeState, setNomeState] = useState<string | null>("Joel");
+
+  function alteraNome() {
+    nome = prompt("Digite o novo nome : ");
+    console.log("Nome digitado: ", nome);
+  }
+
+  function alteraState() {
+    const nome: string | null = prompt("digite seu nome:")
+    setNomeState((nomeStateAnterior) => nomeStateAnterior = nome);
+    console.log("Nome digitado: ", nomeState);
+
+  }
 
   return (
     <main>
+      <div>
+        <p>Nome : {nome}</p>
+        <button onClick={alteraNome}>Nome = {nome}</button>
+      </div>
+      <div>
+        <p>Nome State: {nomeState}</p>
+        <button onClick={alteraState}>Nome = {nomeState}</button>
+      </div>
       <section>
         <h2>Conteúdo Básico</h2>
         <p>
@@ -40,15 +58,16 @@ export default function Conteudo() {
 
         {/* Esta imagem tem referência interna na public */}
         <figure>
-          <img src="/img/Quadrado.png" alt="Exemplo de imagem" />
+          <img src="/img/quadrado.png" alt="Exemplo de imagem" />
           <figcaption>Bloco de Imagem 400 x 400</figcaption>
         </figure>
       </section>
-      <section> 
+
+      <section >
         <h2>Especial</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta unde sunt eius repellat sapiente quasi neque quod veniam, molestias, molestiae nam est non. Nisi dignissimos eligendi quisquam maxime totam doloremque cupiditate qui nemo? Atque, aperiam. Minima, modi eius. Eligendi pariatur beatae officia illum dolores blanditiis. Repellat similique aliquid veritatis sit?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, vitae recusandae? Inventore impedit earum nisi reiciendis provident autem cum aliquam natus excepturi ut distinctio, laborum veritatis, veniam fugiat exercitationem quam iusto accusantium culpa reprehenderit quas quibusdam. Nulla, quibusdam cumque? Quibusdam dolorum dolore deserunt. Assumenda eos voluptatibus dolores eaque fugit quod?</p>
       </section>
-      <button onClick={alternaSecao}>{mostraSecao ? "ESCONDER" : "MOSTRAR"}</button>
+
     </main>
   );
 }
