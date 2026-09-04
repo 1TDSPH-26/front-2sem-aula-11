@@ -3,17 +3,29 @@ import imgQuadrada from "../../img/quadrado.png";
 
 export default function Conteudo() {
 
-    const [mostraSecao, setMostraSecao] = useState(false);
 
-    const alternaSecao = () => {
-
-        setMostraSecao(!mostraSecao);
-        console.log(mostraSecao);
+    const[name , setName] = useState<string | null>("giovanni")
+    let nome:string|null = "Giovanni" 
+    function alteraNome(){
+        nome = prompt("digite nome:")
+        console.log("nome digitado: ", nome)
     }
-
+    function alteraState(){
+        const aux:string|null = prompt("digite um nome: ")
+        setName((nameAnterior)=> nameAnterior = aux )
+        console.log(name)
+        
+    }
 
     return (
         <main>
+            <div><p>
+                Nome: {nome}</p></div>
+                <button onClick={alteraNome}>nome = {nome}</button>
+
+            <div><p> 
+                Nome set: {name}</p></div>
+            <button onClick={alteraState}>nome = {name}</button>
             <section>
                 <h2>Conteúdo Básico</h2>
                 <p>
@@ -51,7 +63,7 @@ export default function Conteudo() {
                 <h2>Especial</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, vitae recusandae? Inventore impedit earum nisi reiciendis provident autem cum aliquam natus excepturi ut distinctio, laborum veritatis, veniam fugiat exercitationem quam iusto accusantium culpa reprehenderit quas quibusdam. Nulla, quibusdam cumque? Quibusdam dolorum dolore deserunt. Assumenda eos voluptatibus dolores eaque fugit quod?</p>
             </section>
-            <button onClick={alternaSecao}>{mostraSecao ? "ESCONDER" : "MOSTRAR"}</button>
+            
         </main>
     );
 }
