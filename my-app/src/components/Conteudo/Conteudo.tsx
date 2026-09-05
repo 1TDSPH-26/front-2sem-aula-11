@@ -3,15 +3,30 @@ import imgQuadrada from "../../img/quadrado.png";
 
 export default function Conteudo() {
 
-    const[mostraSecao, setMostraSecao] = useState(false);
+    let nome: string | null = "Alê";
+    const[nomeState, setNomeState] = useState<String | null>("Joel");
 
-    const alternaSecao = () =>{
-        setMostraSecao(!mostraSecao);
-        console.log(mostraSecao);
+    function alteraNome(){
+        nome = prompt("Digite seu nome:");
+        console.log("Nome digitado: ", nome);
+
+    }
+    function alteraState() {
+        const nome: string | null = prompt("digite seu nome:")
+        setNomeState(nome);
+        console.log("Nome digitado: ", nomeState);
     }
 
     return (
         <main>
+            <div>
+                <p>Nome : {nome}</p>
+                <button onClick={alteraNome}>Nome = {nome}</button>
+            </div>
+            <div>
+                <p>Nome State: {nomeState}</p>
+                <button onClick={alteraState}>Nome = {nomeState}</button>
+            </div>
             <section>
                 <h2>Conteúdo básico</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero cumque dolore asperiores dolorum eaque commodi numquam adipisci? Quibusdam optio repellat non. Repellat, corporis veniam velit aliquid repellendus autem pariatur. Libero?</p>
@@ -31,7 +46,6 @@ export default function Conteudo() {
                 <h2>Especial</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora eligendi repellendus a incidunt nam assumenda animi, dolore consectetur iure rerum repudiandae. Recusandae molestias doloremque, velit cum quibusdam eius fugiat optio voluptates repellendus tempore! Illum, a iure! Natus quos aliquid in cupiditate corrupti vel atque, dignissimos distinctio consequatur sit nostrum saepe.</p>
             </section>
-            <button onClick={alternaSecao}>{mostraSecao ? "Esconder" : "Mostrar"}</button>
         </main>
     )
 }
